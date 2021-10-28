@@ -1,6 +1,6 @@
 [package]
 name = "squirrel3-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Adil Basar <adilbasar.dev@gmail.com>"]
 description = "Fast, simple and reliable random number generator."
