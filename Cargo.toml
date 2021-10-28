@@ -1,0 +1,12 @@
+[package]
+name = "squirrel3-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Adil Basar <adilbasar.dev@gmail.com>"]
+description = "Fast, simple and reliable random number generator."
+license = "MIT"
+keywords = ["random", "rng", "squirrel3", "hash", "noise", "simple"]
+categories = ["algorithms", "mathematics"]
+repository = ""
+
+[dependencies]
