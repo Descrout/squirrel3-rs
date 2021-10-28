@@ -155,6 +155,8 @@ pub mod sq3 {
     }
 
     // NO SIDE EFFECTS FUNCTIONS
+
+    // https://www.youtube.com/watch?v=LWFzPP8ZbdU
     pub fn squirrel3(position: u32, seed: u32) -> u32 {
         let mut mangled = position.wrapping_mul(0xB5297A4D);
         mangled = mangled.wrapping_add(seed);
@@ -184,48 +186,5 @@ pub mod sq3 {
     #[inline]
     pub fn noise3d(x: u32, y: u32, z: u32) -> f32 {
         normalized(x.wrapping_add(y.wrapping_mul(198491317)).wrapping_add(z.wrapping_mul(6542989)), 0)
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use crate::sq3;
-
-    #[test]
-    fn average() {
-        const STEP: usize = 1_000_000;
-
-        // rand avg
-        let mut sum: f32 = 0.0;
-        for _ in 0..STEP {
-            sum += sq3::rand();
-        }
-        println!("Average should be close to 0.5 ===> {}", sum / STEP as f32);
-
-        // coin flip avg
-        let mut true_count: usize = 0;
-        let mut false_count: usize = 0;
-        for _ in 0..STEP {
-            if sq3::bool() {
-                true_count += 1;
-            }else {
-                false_count += 1;
-            }
-        }
-        println!("{} times coin flip, resulted in ===> |{}, TRUE| <-> |{}, FALSE|", STEP, true_count, false_count);
-
-        // range f32 avg
-        sum = 0.0;
-        for _ in 0..STEP {
-            sum += sq3::range_f32(-6.28, 6.28);
-        }
-        println!("Average should be close to 0.0 ===> {}", sum / STEP as f32);
-
-        // range i32 avg
-        let mut sum: i32 = 0;
-        for _ in 0..STEP {
-            sum += sq3::range_i32(-1000, 1000);
-        }
-        println!("Average should be close to 0 ===> {}", sum / STEP as i32);
     }
 }
