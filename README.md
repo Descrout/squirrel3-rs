@@ -27,7 +27,7 @@ let mut fruits = vec!["apple", "banana", "peach", "orange", "strawberry"];
 sq3::shuffle(&mut fruits);
 
 println!("Shuffled: {:?}", fruits);
-println!("I randomly wanted to eat: {}", fruits[ sq3::usize( fruits.len() ) ] );
+println!("I want to eat: {}", fruits[ sq3::usize(fruits.len()) ] );
 ```
 ### Local State:
 ```rust
