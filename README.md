@@ -1,13 +1,13 @@
 # squirrel3-rs
 
-Fast, simple and reliable; noise-based, random number generator.  
+Simple and reliable; noise-based, random number generator.  
 
 Using; [squirrel3](https://www.youtube.com/watch?v=LWFzPP8ZbdU) hashing function for the noise.
 
 ## Usage
 ```rust
 [dependencies]
-squirrel3-rs = "0.1.0"
+squirrel3-rs = "0.1.2"
 ```
 
 ```rust

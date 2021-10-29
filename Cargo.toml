@@ -1,12 +1,15 @@
 [package]
 name = "squirrel3-rs"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Adil Basar <adilbasar.dev@gmail.com>"]
-description = "Fast, simple and reliable random number generator."
+description = "Simple and reliable random number generator."
 license = "MIT"
 keywords = ["random", "rng", "simple", "hash", "noise"]
 categories = ["algorithms", "mathematics"]
 repository = "https://github.com/Descrout/squirrel3-rs"
 
-[dependencies]
+[dev-dependencies]
+fastrand = "1.5.0"
+wyhash = "0.5.0"
+rand = "0.8"
